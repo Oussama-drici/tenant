@@ -6,7 +6,7 @@ metadata:
 spec:
   address: 192.168.1.10/24
   ifname: ens6
-  nodename: edge-amine2
+  nodename: edge-amine3
   nvni-name: nvni-2
   transport_network: mpls
   type: WAN
