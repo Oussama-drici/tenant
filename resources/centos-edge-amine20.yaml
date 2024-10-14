@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: centos-edge-amine20
+  name: centos-edge20
 spec:
   containers:
   - command:
@@ -12,5 +12,5 @@ spec:
     name: centos
     securityContext:
       privileged: true
-  nodeName: edge-amine2
+  nodeName: edge2
   restartPolicy: Always

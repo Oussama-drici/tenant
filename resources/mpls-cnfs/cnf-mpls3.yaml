@@ -1,13 +1,13 @@
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkFunction
 metadata:
-  name: cnf-wan-mpls-1-edge-amine3
+  name: cnf-wan-mpls-1-edge3
   namespace: namla-system
 spec:
-  address: 192.168.1.10/24
-  ifname: ens6
-  nodename: edge-amine3
-  nvni-name: nvni-2
+  address: 192.168.18.186/24
+  ifname: enp2s0
+  nodename: edge3
+  nvni-name: nvni-1
   transport_network: mpls
   type: WAN
   control-plane:
@@ -16,42 +16,42 @@ spec:
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkLinuxRoute
 metadata:
-  name: cnf-route-cnf-wan-mpls-1-edge-amine3-1
+  name: cnf-route-cnf-wan-mpls-1-edge3-1
   namespace: namla-system
 spec:
-  nodename: edge-amine3
-  cnf: cnf-wan-mpls-1-edge-amine3
+  nodename: edge3
+  cnf: cnf-wan-mpls-1-edge3
   config:
     scope: GLOBAL
-    dst_network: 192.168.1.13/32
-    gw_addr: 192.168.1.1  # ---> 77
+    dst_network: 192.168.18.235/32
+    gw_addr: 192.168.18.1  # ---> 77
     metric: 0
 ---
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkLinuxRoute
 metadata:
-  name: cnf-route-cnf-wan-mpls-1-edge-amine3-2
+  name: cnf-route-cnf-wan-mpls-1-edge3-2
   namespace: namla-system
 spec:
-  nodename: edge-amine3
-  cnf: cnf-wan-mpls-1-edge-amine3
+  nodename: edge3
+  cnf: cnf-wan-mpls-1-edge3
   config:
     scope: GLOBAL
-    dst_network: 192.168.1.12/32
-    gw_addr: 192.168.1.1  # ---> 77
+    dst_network: 192.168.18.170/32
+    gw_addr: 192.168.18.1  # ---> 77
     metric: 0
 ---
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkLinuxRoute
 metadata:
-  name: cnf-route-cnf-wan-mpls-1-edge-amine3-4
+  name: cnf-route-cnf-wan-mpls-1-edge3-4
   namespace: namla-system
 spec:
-  nodename: edge-amine3
-  cnf: cnf-wan-mpls-1-edge-amine3
+  nodename: edge3
+  cnf: cnf-wan-mpls-1-edge3
   config:
     scope: GLOBAL
-    dst_network: 192.168.1.11/32
-    gw_addr: 192.168.1.1  # ---> 77
+    dst_network: 192.168.18.245/32
+    gw_addr: 192.168.18.1  # ---> 77
     metric: 0
 
