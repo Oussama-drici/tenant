@@ -4,8 +4,8 @@ metadata:
   name: cnf-lan-lan-2-edge1
   namespace: namla-system
 spec:
-  address: 192.168.220.181
-  ifname: enp10s0
+  address: 192.168.220.146/24
+  ifname: enp4s0
   nodename: edge1
   nvni-name: nvni-3
   type: LAN
