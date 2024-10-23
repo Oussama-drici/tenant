@@ -4,7 +4,7 @@ metadata:
   name: cnf-wan-internet-1-edge2
   namespace: namla-system
 spec:
-  address: 192.168.1.3/24
+  address: 192.168.1.2/24
   ifname: eno1
   nodename: edge2
   transport_network: internet
