@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-ping
+  name: test-ping
+  namespace: test1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: test-ping
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: test-ping
+    spec:
+      containers:
+      - image: nginx:latest
+        ports:
+        - containerPort: 80
+        name: nginx
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-ping-svc
+  name: test-ping-svc
+  namespace: test1
+spec:
+  ports:
+  - name: "80"
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: test-ping
+  type: ClusterIP
+status:
+  loadBalancer: {}
