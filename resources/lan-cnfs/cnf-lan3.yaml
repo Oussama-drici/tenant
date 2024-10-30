@@ -1,12 +1,12 @@
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkFunction
 metadata:
-  name: cnf-lan-lan-2-edge2
+  name: cnf-lan-lan-2-edge5
   namespace: namla-system
 spec:
-  address: 10.55.0.2/24
-  ifname: eno7
-  nodename: edge2
+  address: 192.168.220.177/24
+  ifname: enp11s0
+  nodename: edge5
   nvni-name: nvni-3
   type: LAN
   #stn: true
