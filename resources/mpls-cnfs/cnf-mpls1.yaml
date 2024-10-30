@@ -24,7 +24,7 @@ spec:
   cnf: cnf-wan-mpls-1-edge3
   config:
     scope: GLOBAL
-    dst_network: 192.168.18.149/24
+    dst_network: 192.168.18.149/32
     gw_addr: 192.168.18.1  # ---> 77
     metric: 0
 ---
@@ -38,6 +38,6 @@ spec:
   cnf: cnf-wan-mpls-1-edge3
   config:
     scope: GLOBAL
-    dst_network: 192.168.18.149/24
+    dst_network: 192.168.18.149/32
     gw_addr: 192.168.18.1  # ---> 77
     metric: 0
