@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-edge5-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx-edge5
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      annotations: 
+        namla.cloud/service-chain: "{\"mode\":\"static\",\"type\":\"TAP\",\"master\": \"cnf-lan-lan-2-edge5\"}"
+      labels:
+        app: nginx-edge5
+        # sfc: "yes"
+    spec:
+      nodeName: edge5
+      containers:
+      - name: nginx-edge5
+        image: nginx
+        ports:
+        - containerPort: 80

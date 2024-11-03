@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: centos-edge3-deployment
+spec:
+  selector:
+    matchLabels:
+      app: centos-edge3
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      annotations: 
+        namla.cloud/service-chain: "{\"mode\":\"static\",\"type\":\"TAP\",\"master\": \"cnf-lan-lan-2-edge3\"}"
+      labels:
+        app: centos-edge3
+        # sfc: "yes"
+    spec:
+      nodeName: edge3
+      containers:
+      - command:
+        - sh
+        - -c
+        - while true; do sleep 3600; done
+        image: centos:centos8
+        name: centos
