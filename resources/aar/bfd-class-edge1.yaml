@@ -1,0 +1,12 @@
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkBfdClass
+metadata:
+  name: bfd-class-web
+  namespace: namla-system
+spec:
+  cnf: cnf-lan-lan-2-edge5
+  nodename: edge5
+  config:
+    loss: 1
+    latency: 10
+    jitter: 1

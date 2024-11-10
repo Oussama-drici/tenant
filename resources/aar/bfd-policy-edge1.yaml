@@ -1,0 +1,14 @@
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkBfdPolicy
+metadata:
+  name: bfd-policy1
+  namespace: namla-system
+spec:
+  cnf: cnf-lan-lan-2-edge5
+  nodename: edge5
+  config:
+     acl_rule_name: acl1
+     bfd_class_name: bfd-class-web
+     to: edge3
+     dscp: AF13
+     interface: defaultbvi

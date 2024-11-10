@@ -1,0 +1,16 @@
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkAccessList
+metadata:
+  name: acl1
+  namespace: namla-system
+spec:
+  cnf: cnf-lan-lan-2-edge5
+  nodename: edge5
+  config:
+    rules:
+     - action: PERMIT
+       ip_rule:
+         ip: 
+           destination_network: 172.18.0.2/32
+           source_network: 172.18.2.3/32 
+           protocol: 0
