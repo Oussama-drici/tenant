@@ -14,3 +14,10 @@ spec:
   restartPolicy: Always
   nodeName: edge2
 status: {}
+
+
+ifaces:{index:2 name:"ens4" status:UP IpAddrs:"10.2.2.8/32" HardwareAddr:"42:01:0a:02:02:08" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:04.0" vname:"nvni-0"} ifaces:{index:3 name:"ens5" status:UP IpAddrs:"10.2.1.13/32" HardwareAddr:"42:01:0a:02:01:0d" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:05.0" vname:"nvni-1"} ifaces:{index:4 name:"ens6" status:UP IpAddrs:"10.2.3.8/32" HardwareAddr:"42:01:0a:02:03:08" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:06.0" vname:"nvni-2"} ifaces:{index:5 name:"ens7" status:UP IpAddrs:"10.2.4.8/32" HardwareAddr:"42:01:0a:02:04:08" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:07.0" vname:"nvni-3"}
+
+ifaces:{index:2 name:"ens4" status:UP IpAddrs:"10.2.2.6/32" HardwareAddr:"42:01:0a:02:02:06" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:04.0" vname:"nvni-0"} ifaces:{index:3 name:"ens5" status:UP IpAddrs:"10.2.1.11/32" HardwareAddr:"42:01:0a:02:01:0b" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:05.0" vname:"nvni-1"} ifaces:{index:4 name:"ens6" status:UP IpAddrs:"10.2.3.6/32" HardwareAddr:"42:01:0a:02:03:06" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:06.0" vname:"nvni-2"} ifaces:{index:5 name:"ens7" status:UP IpAddrs:"10.2.4.6/32" HardwareAddr:"42:01:0a:02:04:06" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:07.0" vname:"nvni-3"}
+
+ifaces:{index:2 name:"ens4" status:UP IpAddrs:"10.2.2.7/32" HardwareAddr:"42:01:0a:02:02:07" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:04.0" vname:"nvni-0"} ifaces:{index:3 name:"ens5" status:UP IpAddrs:"10.2.1.12/32" HardwareAddr:"42:01:0a:02:01:0c" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:05.0" vname:"nvni-1"} ifaces:{index:4 name:"ens6" status:UP IpAddrs:"10.2.3.7/32" HardwareAddr:"42:01:0a:02:03:07" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:06.0" vname:"nvni-2"} ifaces:{index:5 name:"ens7" status:UP IpAddrs:"10.2.4.7/32" HardwareAddr:"42:01:0a:02:04:07" MTU:1460 flags:"up|broadcast|multicast" PCI:"0000:00:07.0" vname:"nvni-3"}

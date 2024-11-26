@@ -4,8 +4,8 @@ metadata:
   name: cnf-wan-internet-1-edge3
   namespace: namla-system
 spec:
-  address: 192.168.30.223/24
-  ifname: enp6s0
+  address: 10.2.1.12/32
+  ifname: ens5
   nodename: edge3
   transport_network: internet
   nvni-name: nvni-1
@@ -24,5 +24,5 @@ spec:
   config:
     scope: GLOBAL
     dst_network: 0.0.0.0/0
-    gw_addr: 192.168.30.1  # ---> 207
+    gw_addr: 10.2.1.1 # --> 118
     metric: 0
