@@ -8,7 +8,7 @@ spec:
   ifname: ens6
   nodename: edge2
   nvni-name: nvni-2
-  transport_network: mpls
+  transport-network: mpls
   type: WAN
   control-plane:
     bgp-as: 64513

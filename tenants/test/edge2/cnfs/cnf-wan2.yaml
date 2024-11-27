@@ -7,7 +7,7 @@ spec:
   address: 10.2.1.11/32
   ifname: ens5
   nodename: edge2
-  transport_network: internet
+  transport-network: internet
   nvni-name: nvni-1
   type: WAN
   control-plane:
