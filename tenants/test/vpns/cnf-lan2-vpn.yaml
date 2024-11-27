@@ -10,7 +10,7 @@ spec:
     controllerId:
       id: controllercnf@namla.cloud
       type: RFC822_ADDR
-    controllerIpAddress: 20.126.152.166
+    controllerIpAddress: 34.38.169.198
     transportNetwork: internet
     mgmtType: SINGLE
     localId:
