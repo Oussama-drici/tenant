@@ -12,17 +12,17 @@ spec:
   type: WAN
   control-plane:
     bgp-as: 64514
----
-apiVersion: cnf.namla.com/v1alpha1
-kind: CloudNativeNetworkLinuxRoute
-metadata:
-  name: cnf-default-route-cnf-wan-internet-1-edge1
-  namespace: namla-system
-spec:
-  nodename: edge1
-  cnf: cnf-wan-internet-1-edge1
-  config:
-    scope: GLOBAL
-    dst_network: 0.0.0.0/0
-    gw_addr: 10.2.1.1  # ---> 207
-    metric: 0
+# ---
+# apiVersion: cnf.namla.com/v1alpha1
+# kind: CloudNativeNetworkLinuxRoute
+# metadata:
+#   name: cnf-default-route-cnf-wan-internet-1-edge1
+#   namespace: namla-system
+# spec:
+#   nodename: edge1
+#   cnf: cnf-wan-internet-1-edge1
+#   config:
+#     scope: GLOBAL
+#     dst_network: 0.0.0.0/0
+#     gw_addr: 10.2.1.1  # ---> 207
+#     metric: 0
