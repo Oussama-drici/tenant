@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: troubleshoot-etcd
+  namespace: namla-system
+spec:
+  containers:
+  - name: troubleshoot
+    image: appropriate/curl
+    command: ["sleep", "3600"]  # Keep the pod running for an hou
