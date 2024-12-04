@@ -4,7 +4,7 @@ metadata:
   name: cnf-wan-mpls-1-edge3
   namespace: namla-system
 spec:
-  address: 10.2.3.7/24
+  address: 10.2.3.7/32
   ifname: ens6
   nodename: edge3
   nvni-name: nvni-2
