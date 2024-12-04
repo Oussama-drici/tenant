@@ -4,7 +4,7 @@ metadata:
   name: cnf-wan-mpls-1-edge3
   namespace: namla-system
 spec:
-  address: 10.2.3.7/32
+  address: 10.2.3.7/24
   ifname: ens6
   nodename: edge3
   nvni-name: nvni-2
@@ -12,31 +12,31 @@ spec:
   type: WAN
   control-plane:
     bgp-as: 64513
-# ---
-# apiVersion: cnf.namla.com/v1alpha1
-# kind: CloudNativeNetworkLinuxRoute
-# metadata:
-#   name: cnf-route-cnf-wan-mpls-1-edge3-2
-#   namespace: namla-system
-# spec:
-#   nodename: edge3
-#   cnf: cnf-wan-mpls-1-edge3
-#   config:
-#     scope: GLOBAL
-#     dst_network: 10.2.3.6/32
-#     gw_addr: 10.2.3.1  # ---> 77
-#     metric: 0
-# ---
-# apiVersion: cnf.namla.com/v1alpha1
-# kind: CloudNativeNetworkLinuxRoute
-# metadata:
-#   name: cnf-route-cnf-wan-mpls-1-edge3-1
-#   namespace: namla-system
-# spec:
-#   nodename: edge3
-#   cnf: cnf-wan-mpls-1-edge3
-#   config:
-#     scope: GLOBAL
-#     dst_network: 10.2.3.8/32
-#     gw_addr: 10.2.3.1  # ---> 77
-#     metric: 0
+---
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkLinuxRoute
+metadata:
+  name: cnf-route-cnf-wan-mpls-1-edge3-2
+  namespace: namla-system
+spec:
+  nodename: edge3
+  cnf: cnf-wan-mpls-1-edge3
+  config:
+    scope: GLOBAL
+    dst_network: 10.2.3.6/32
+    gw_addr: 10.2.3.1  # ---> 77
+    metric: 0
+---
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkLinuxRoute
+metadata:
+  name: cnf-route-cnf-wan-mpls-1-edge3-1
+  namespace: namla-system
+spec:
+  nodename: edge3
+  cnf: cnf-wan-mpls-1-edge3
+  config:
+    scope: GLOBAL
+    dst_network: 10.2.3.8/32
+    gw_addr: 10.2.3.1  # ---> 77
+    metric: 0
