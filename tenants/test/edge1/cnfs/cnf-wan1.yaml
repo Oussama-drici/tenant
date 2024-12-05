@@ -8,7 +8,7 @@ spec:
   ifname: enp2s0
   nodename: edge1
   transport-network: internet
-  nvni-name: nvni-1
+  nvni-name: nvni-2
   type: WAN
   control-plane:
     bgp-as: 64514

@@ -8,7 +8,7 @@ spec:
   address: 192.168.20.134/24
   ifname: enp3s0
   nodename: edge1
-  nvni-name: nvni-2
+  nvni-name: nvni-1
   transport-network: mpls
   type: WAN
   control-plane:
