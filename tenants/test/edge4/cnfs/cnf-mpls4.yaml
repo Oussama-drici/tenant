@@ -1,0 +1,42 @@
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkFunction
+metadata:
+  name: cnf-wan-mpls-1-edge4
+  namespace: namla-system
+spec:
+  address: 192.168.20.181/24
+  ifname: enp3s0
+  nodename: edge4
+  nvni-name: nvni-2
+  transport-network: mpls
+  type: WAN
+  control-plane:
+    bgp-as: 64513
+---
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkLinuxRoute
+metadata:
+  name: cnf-route-cnf-wan-mpls-1-edge4-2
+  namespace: namla-system
+spec:
+  nodename: edge4
+  cnf: cnf-wan-mpls-1-edge4
+  config:
+    scope: GLOBAL
+    dst_network: 192.168.20.237/32
+    gw_addr: 192.168.20.1  # ---> 77
+    metric: 0
+---
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkLinuxRoute
+metadata:
+  name: cnf-route-cnf-wan-mpls-1-edge4-3
+  namespace: namla-system
+spec:
+  nodename: edge4
+  cnf: cnf-wan-mpls-1-edge4
+  config:
+    scope: GLOBAL
+    dst_network: 192.168.20.140/32
+    gw_addr: 192.168.20.1  # ---> 77
+    metric: 0
