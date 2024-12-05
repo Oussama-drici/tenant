@@ -4,25 +4,25 @@ metadata:
   name: cnf-wan-internet-1-edge3
   namespace: namla-system
 spec:
-  address: 10.2.1.12/24
-  ifname: ens5
+  address: 192.168.10.212/24
+  ifname: enp2s0
   nodename: edge3
   transport-network: internet
   nvni-name: nvni-1
   type: WAN
   control-plane:
     bgp-as: 64514
-# ---
-# apiVersion: cnf.namla.com/v1alpha1
-# kind: CloudNativeNetworkLinuxRoute
-# metadata:
-#   name: cnf-default-route-cnf-wan-internet-1-edge3
-#   namespace: namla-system
-# spec:
-#   nodename: edge3
-#   cnf: cnf-wan-internet-1-edge3
-#   config:
-#     scope: GLOBAL
-#     dst_network: 0.0.0.0/0
-#     gw_addr: 10.2.1.1 # --> 118
-#     metric: 0
+---
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkLinuxRoute
+metadata:
+  name: cnf-default-route-cnf-wan-internet-1-edge3
+  namespace: namla-system
+spec:
+  nodename: edge3
+  cnf: cnf-wan-internet-1-edge3
+  config:
+    scope: GLOBAL
+    dst_network: 0.0.0.0/0
+    gw_addr: 192.168.10.1 # --> 118
+    metric: 0

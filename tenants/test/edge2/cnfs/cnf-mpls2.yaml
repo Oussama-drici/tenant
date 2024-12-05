@@ -4,8 +4,8 @@ metadata:
   name: cnf-wan-mpls-1-edge2
   namespace: namla-system
 spec:
-  address: 10.2.3.6/24
-  ifname: ens6
+  address: 192.168.20.237/24
+  ifname: enp3s0
   nodename: edge2
   nvni-name: nvni-2
   transport-network: mpls
@@ -23,8 +23,8 @@ spec:
   cnf: cnf-wan-mpls-1-edge2
   config:
     scope: GLOBAL
-    dst_network: 10.2.3.8/32
-    gw_addr: 10.2.3.1  # ---> 77
+    dst_network: 192.168.20.134/32
+    gw_addr: 192.168.20.1  # ---> 77
     metric: 0
 ---
 apiVersion: cnf.namla.com/v1alpha1
@@ -37,6 +37,6 @@ spec:
   cnf: cnf-wan-mpls-1-edge2
   config:
     scope: GLOBAL
-    dst_network: 10.2.3.7/32
-    gw_addr: 10.2.3.1  # ---> 77
+    dst_network: 192.168.20.140/32
+    gw_addr: 192.168.20.1  # ---> 77
     metric: 0
