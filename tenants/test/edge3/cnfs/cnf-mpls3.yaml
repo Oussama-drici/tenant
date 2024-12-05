@@ -16,7 +16,7 @@ spec:
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkLinuxRoute
 metadata:
-  name: cnf-route-cnf-wan-mpls-1-edge3-2
+  name: cnf-route-cnf-wan-mpls-1-edge3-1
   namespace: namla-system
 spec:
   nodename: edge3
@@ -30,7 +30,7 @@ spec:
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkLinuxRoute
 metadata:
-  name: cnf-route-cnf-wan-mpls-1-edge3-1
+  name: cnf-route-cnf-wan-mpls-1-edge3-2
   namespace: namla-system
 spec:
   nodename: edge3
