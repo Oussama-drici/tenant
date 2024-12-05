@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: centos-edge1-deployment
+  name: centos-edge4-deployment
 spec:
   selector:
     matchLabels:
-      app: centos-edge1
+      app: centos-edge4
   replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       annotations: 
-        namla.cloud/service-chain: "{\"mode\":\"static\",\"type\":\"TAP\",\"master\": \"cnf-lan-lan-2-edge1\"}"
+        namla.cloud/service-chain: "{\"mode\":\"static\",\"type\":\"TAP\",\"master\": \"cnf-lan-lan-2-edge4\"}"
       labels:
-        app: centos-edge1
+        app: centos-edge4
         # sfc: "yes"
     spec:
-      nodeName: edge1
+      nodeName: edge4
       containers:
       - command:
         - sh
