@@ -4,8 +4,8 @@ metadata:
   name: bfd-class-web
   namespace: namla-system
 spec:
-  cnf: cnf-lan-lan-2-edge5
-  nodename: edge5
+  cnf: cnf-lan-lan-2-edge4
+  nodename: edge4
   config:
     loss: 1
     latency: 10
