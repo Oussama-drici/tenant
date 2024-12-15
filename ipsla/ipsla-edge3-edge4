@@ -7,9 +7,9 @@ spec:
   cnf: cnf-lan-lan-2-edge4
   nodename: edge4
   config:
-    failed:
-    interval:
-    ip_addr:
-    success:
-    type:
+    failed: 3
+    interval: 10
+    ip_addr: 
+    success: 3
+    type: ICMP
     
