@@ -1,7 +1,7 @@
 apiVersion: cnf.namla.com/v1alpha1
 kind: CloudNativeNetworkIpsla
 metadata:
-  name: bfd-class-web
+  name: ipsla1
   namespace: namla-system
 spec:
   cnf: cnf-lan-lan-2-edge4
@@ -9,7 +9,6 @@ spec:
   config:
     failed: 3
     interval: 10
-    ip_addr: 
+    ip_addr: 172.18.2.2
     success: 3
     type: ICMP
-    
