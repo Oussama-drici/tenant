@@ -1,0 +1,15 @@
+apiVersion: cnf.namla.com/v1alpha1
+kind: CloudNativeNetworkIpsla
+metadata:
+  name: bfd-class-web
+  namespace: namla-system
+spec:
+  cnf: cnf-lan-lan-2-edge4
+  nodename: edge4
+  config:
+    failed:
+    interval:
+    ip_addr:
+    success:
+    type:
+    
